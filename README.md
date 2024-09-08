@@ -31,5 +31,11 @@ This project is to give me a guideline on how to use react to build applications
 - modules import/export files to be used in different parts of the project
 - styling react components with plain CSS modules
 
+### File Structure
+
+- src/ - Source code directory
+- public/ - Public assets directory
+- components/ - Reusable React components
+
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
