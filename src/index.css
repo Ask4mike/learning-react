@@ -1,0 +1,35 @@
+/*
+* The styles declared in this file are generic styles that will be applied to all components
+* in this project unless a custom style is given to each individual component.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.app_header {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
