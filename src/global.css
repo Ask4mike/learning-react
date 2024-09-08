@@ -33,3 +33,13 @@ body {
 .cursor:hover {
   cursor: pointer;
 }
+
+img {
+  width: 100%;
+}
+
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
