@@ -1,6 +1,17 @@
 import styles from "./components/PricingCard/PricingCard.module.css";
 
-export default function PricingCard({ label, priceLabel, image, imageAlt }) {
+export default function PricingCard({
+  label,
+  price,
+  duration,
+  image,
+  imageAlt,
+}) {
+  const benefits = [
+    "Up to 10 Users",
+    "Email Support, Call Support",
+    "1 Year Access",
+  ];
   return (
     <div className={styles.card}>
       <div className={`${styles.card__wrapper} center-vertical`}>
@@ -8,12 +19,26 @@ export default function PricingCard({ label, priceLabel, image, imageAlt }) {
         <div className={styles.card__image}>
           <img src={image} alt={imageAlt} />
         </div>
-        <span className={styles.card__priceLabel}>{priceLabel}</span>
-        <p>Everything in Free, Plus</p>
+        <div className={styles["card__price-label"]}>
+          <span className={styles["card__price-figure"]}>{price}</span>
+          <span className={styles["card__price-duration"]}>{duration}</span>
+        </div>
+        <p className={styles["card__benefits-label"]}>
+          Everything in Free, Plus
+        </p>
         <ul className={styles.card__benefits}>
-          <li className={styles.card__benefit}>Up to 10 Users</li>
-          <li className={styles.card__benefit}>Email Support, Call Support</li>
-          <li className={styles.card__benefit}> 1 Year Access</li>
+          {benefits.map((benefit) => {
+            return (
+              <li className={`${styles.card__benefit} center-horizontal`}>
+                <img
+                  src="/icons/check-line.svg"
+                  className={styles["card__benefit-icon"]}
+                  alt=""
+                />
+                {benefit}
+              </li>
+            );
+          })}
         </ul>
         <button className={styles.card__button}>Choose</button>
       </div>
